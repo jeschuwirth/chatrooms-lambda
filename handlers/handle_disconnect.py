@@ -9,7 +9,7 @@ def handle_disconnect(event, connection_id, apig_management_client):
     try:
         user_name, room_id = delete_connection(connection_id)
         deactivate_player(room_id, user_name)
-        delete_room_if_empty(room_id)
+        delete_room_if_empty(room_id, user_name)
 
     except ClientError:
         status_code = 503

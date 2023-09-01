@@ -17,4 +17,4 @@ def get_room_players(room_id, only_active_players = True):
                 'ComparisonOperator': 'NE'
             }
         } if only_active_players else {}
-    )
+    )['Items']

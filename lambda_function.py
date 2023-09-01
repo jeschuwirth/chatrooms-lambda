@@ -33,7 +33,7 @@ def lambda_handler(event, context):
         response['statusCode'] = handle_disconnect(event, connection_id, apig_management_client)
         # update_connected_users(table, room_id, apig_management_client)
 
-    # else:
-    #     response['statusCode'] = routes(route_key, event, connection_id, apig_management_client)
+    else:
+        response['statusCode'] = routes(route_key, event, connection_id, apig_management_client)
 
     return response
